@@ -1,13 +1,13 @@
 class BusinessesController < ApplicationController
 
     def index
-        businesses = Business.all
-        render json: BusinessSerializer.new(businesses).to_serialized_json
+        @businesses = Business.all
+        render json: @businesses
     end
 
     def show
-        business = Business.find_by(id: params[:id])
-        render json: BusinessSerializer.new(business).to_serialized_json
+        @business = Business.find_by(id: params[:id])
+        render json: @business
     end
 
 end
