@@ -6,7 +6,7 @@ class CouponsController < ApplicationController
     end
 
     def create
-        @coupon = Coupon.create(name: params[:name], code: params[:code], expiration_date: params[:expiration_date], business_id: params[:business_id])
+        @coupon = Coupon.create(coupon_params)
         render json: @coupon
     end
 
@@ -16,6 +16,12 @@ class CouponsController < ApplicationController
     def destroy
         coupon = Coupon.find_by(id: params[:id])
         coupon.destroy
+    end
+
+    private
+
+    def coupon_params
+        params.require(:coupon).permit(:name, :code, :expiration_date, :business_id)
     end
 
 end
