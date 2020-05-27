@@ -10,4 +10,9 @@ class BusinessesController < ApplicationController
         render json: @business, include: ['coupons.likes']
     end
 
+    def create
+        @business = Business.create(name: params[:name], location: Faker::Nation.capital_city, business_type: Faker::Company.industry)
+        render json: @business, include: ['coupons.likes']
+    end
+
 end

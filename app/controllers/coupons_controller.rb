@@ -11,6 +11,9 @@ class CouponsController < ApplicationController
     end
 
     def update
+        @coupon = Coupon.find_by(id: params[:id])
+        @coupon.update(coupon_params)
+        render json: @coupon
     end
 
     def destroy
