@@ -1,13 +1,13 @@
 class CouponsController < ApplicationController
 
     def index
-        coupons = Coupon.all
-        render json: CouponSerializer.new(coupons).to_serialized_json
+        @coupons = Coupon.all
+        render json: @coupons
     end
 
     def create
-        coupon = Coupon.create(name: params[:name], code: params[:code], expiration_date: params[:expiration_date], business_id: params[:business_id])
-        render json: CouponSerializer.new(coupon).to_serialized_json
+        @coupon = Coupon.create(name: params[:name], code: params[:code], expiration_date: params[:expiration_date], business_id: params[:business_id])
+        render json: @coupon
     end
 
     def update
