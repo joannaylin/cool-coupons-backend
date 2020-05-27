@@ -10,4 +10,8 @@ class UsersController < ApplicationController
         render json: user, except: [:created_at, :updated_at]
     end
 
+    def create
+        user = User.create(name: Faker::Name.name, username: params[:name], age: rand(13..80))
+        render json: user, except: [:created_at, :updated_at]
+    end
 end
