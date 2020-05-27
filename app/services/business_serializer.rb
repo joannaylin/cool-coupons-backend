@@ -8,7 +8,12 @@ class BusinessSerializer
         @business.to_json(include: {
             coupons: {
                 only: [:id, :name, :code, :expiration_date],
-                except: [:created_at, :updated_at]
+                except: [:created_at, :updated_at],
+                include: {
+                    likes: {
+                        except: [:created_at, :updated_at]
+                    }
+                }
             }
         }, except: [:created_at, :updated_at])
     end
