@@ -1,24 +1,11 @@
-# README
+# cool-coupons-backend
+Cool Coupons: The place to go to get all the newest coupons for those times where you just need to save money. Built using vanilla JavaScript.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Architecture
+* Rails API for Cool-Coupons
+* CRUD functionality for coupons for Business Users. 
+* Vanilla JavaScript [Frontend](https://github.com/joannaylin/cool-coupons-backend)
 
-Things you may want to cover:
 
-* Ruby version
+Built with @Isaacmeedinaa. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
