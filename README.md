@@ -5,7 +5,7 @@ Cool Coupons: The place to go to get all the newest coupons for those times wher
 * Rails API for Cool-Coupons.
 * Backend of a Single Page Application.
 * CRUD functionality for coupons for Business Users. 
-* Vanilla JavaScript [Frontend](https://github.com/joannaylin/cool-coupons-backend)
+* Vanilla JavaScript [Frontend](https://github.com/joannaylin/cool-coupons-frontend)
 
 
 Built with @Isaacmeedinaa. 
